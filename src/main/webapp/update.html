@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页编辑</title>
+    <script src="update.js"></script>
+    <style>
+        body {
+            background-color: #eeeeee;
+        }
+
+        #table /* 奇偶行背景色交替 */
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        /* 鼠标悬停效果 */
+        #table tr:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input type="hidden" name="action" value="login"/>
+
+    <h1 align="center">主页编辑</h1>
+    <table align="center">
+
+        <tr>
+            <td>电话号码：</td>
+            <td><input type="text" name="phoneNumber" id="phoneNumber"/></td>
+        </tr>
+
+        <tr>
+            <td>邮箱：</td>
+            <td><input type="email" name="email" id="email"/></td>
+        </tr>
+
+
+        <tr>
+            <td>经历描述：</td>
+            <td><textarea name="description" rows="20" cols="40" id="description"></textarea></td>
+        </tr>
+
+        <tr>
+            <td>个人技能：</td>
+            <td>
+                <table id="table">
+                    <thead>
+                    <td>个人技能</td>
+                    <td>操作</td>
+                    </thead>
+                    <tr>
+                        <td contenteditable="true" id="newContent"></td>
+                        <td>
+                            <button class="add-btn" onclick="addRow()">添加</button>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="location.reload(true);">重置</button>
+            </td>
+            <td>
+                <button onclick="update()">提交</button>
+            </td>
+        </tr>
+    </table>
+
+</div>
+</body>
+</body>
+</html>

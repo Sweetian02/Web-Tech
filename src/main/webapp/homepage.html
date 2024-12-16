@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="icons.css">
+    <script src="weather.js"></script>
+    <script src="display.js"></script>
+    <script src="ImageChange.js"></script>
+</head>
+
+<body>
+<div class="top-bar">
+    <span>个人主页</span>
+    <span id="count"></span>
+</div>
+<div class="basic-info">
+    <div class="tian">
+        <img src="imgs/tian.png" class="photo" id="headphoto">
+
+        <div class="name">
+            <h2>田子潇</h2>
+            <p>中南大学——计算机科学与技术2021级</p>
+        </div>
+    </div>
+
+    <ul>
+        <li>男<i class="fas fa-venus-mars"></i></li>
+        <li>2002/11<i class="fas fa-user"></i></li>
+        <li>
+            <div id="phoneNumber"></div>
+            <i class="fas fa-phone"></i></li>
+        <li>
+            <div id="email"></div>
+            <i class="fas fa-envelope"></i></li>
+        <li>长沙市<i class="fas fa-home"></i></li>
+    </ul>
+
+</div>
+
+<div class="main-content">
+    <div class="board">
+        <div class="title">
+            <h2><i class="fas fa-graduation-cap"></i>教育背景</h2>
+        </div>
+        <div class="university">
+            <span>2021.9-2025.6</span>
+            <span style="margin-left: 5%;">中南大学(本科)</span>
+            <span style="margin-left: 5%;">计算机科学与技术</span>
+        </div>
+        <div class="content">
+
+            <div class="course">
+                主修课程：数据结构、算法分析与设计、计算机组成原理与汇编、操作系统、数据库原理、计算机网络、软件工程
+            </div>
+
+        </div>
+    </div>
+    <div class="board">
+        <div class="title">
+            <h2><i class="fas fa-portrait"></i>校园经历</h2>
+        </div>
+
+        <div class="content">
+            <ul class="exp">
+                <li><span style="margin-right: 5%;">2021.10-2022.6</span> 校团委社团部权益中心干事</li>
+                <li><span style="margin-right: 5%;">2022.9-2023.6</span> 校团委社团部权益中心副主任</li>
+            </ul>
+            <div id="description">
+
+            </div>
+        </div>
+    </div>
+    <div class="board">
+
+        <div class="title">
+            <h2><i class="fas fa-cog"></i>个人技能</h2>
+        </div>
+        <div class="content">
+            <ul id="skills">
+
+            </ul>
+        </div>
+    </div>
+    <div class="board">
+        <div class="title">
+            <h2><i class="fas fa-icons"></i>兴趣爱好</h2>
+        </div>
+        <div class="hobby">
+            <div class="read">
+                <h3>阅读书目推荐</h3>
+
+                <div class="books">
+                    <div class="book">
+                        <a href="http://dangshi.people.com.cn/GB/146570/355070/index.html" target="_blank">
+                            <img src="imgs\deng.jpg">
+                        </a>
+
+
+                    </div>
+                    <div class="book">
+                        <a href="https://zhuanlan.zhihu.com/p/599914138" target="_blank">
+                            <img src="imgs\dba.jpg">
+                        </a>
+                    </div>
+
+                    <div class="book">
+                        <a href="https://www.zhihu.com/tardis/bd/art/445152642?source_id=1001" target="_blank">
+                            <img src="imgs\social.jpg">
+                        </a>
+                    </div>
+                    <div class="book">
+                        <a href="https://www.zhihu.com/tardis/bd/art/445152642?source_id=1001" target="_blank">
+                            <img src="imgs\zssn.jpg">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="music">
+                <h3>音乐</h3>
+                <div class="songs">
+                    <div class="song">
+                        <a href="https://music.163.com/?from=wsdh#/album?id=2759704" target="_blank">
+                            <img src="imgs\fang.jpg" alt="" class="cover">
+                        </a>
+                    </div>
+                    <div class="song">
+                        <a href="https://music.163.com/#/album?id=8128" target="_blank">
+                            <img src="imgs\fang2.jpg" alt="" class="cover">
+                        </a>
+                    </div>
+                    <div class="song">
+                        <a href="https://music.163.com/?from=wsdh#/album?id=15199" target="_blank">
+                            <img src="imgs\tao.jpg" alt="" class="cover">
+                        </a>
+                    </div>
+                    <div class="song">
+                        <a href="https://music.163.com/?from=wsdh#/album?id=15190" target="_blank">
+                            <img src="imgs\black.jpg" alt="" class="cover">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="board">
+        <div class="title">
+            <h3 id="title-more">更多</h3>
+        </div>
+        <div class="more">
+            <div class="weather">
+                <h4><i class="fas fa-cloud"></i>当前天气</h4>
+                <div id="weather-info"></div>
+            </div>
+            <div class="editor">
+                <h4><i class="fas fa-edit"></i>编辑</h4>
+
+                <a href="passwordinput.html" target="_blank">点此编辑页面</a>
+                <input type="file" accept="image/*" id="fileInput" onchange="changeImage()" value="选择图片">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>
